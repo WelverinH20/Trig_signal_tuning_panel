@@ -1,4 +1,4 @@
-26636372855723626
+26638135937833993
 5925_rotary
 2925_ADA
 
@@ -69096,6 +69096,13 @@ THT
 0
 4
 2
+JST_Connector
+CONN9_S9B-ZR_JST
+
+S9B-ZR-3.4LFSN 
+0
+9
+9
 Jumper
 Jumper_Harwin_S1621_P10.9mm
 Harwin SMD jumper link, 12.3x2.3mm, 1.8mm height, 10.9mm pad pitch, https://cdn.harwin.com/pdfs/S1621R.pdf
