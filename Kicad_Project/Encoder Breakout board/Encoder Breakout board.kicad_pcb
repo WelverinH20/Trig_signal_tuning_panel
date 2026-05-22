@@ -34,6 +34,45 @@
 		(45 "User.4" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -72,9 +111,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "./")
 		)
 	)
 	(net 0 "")
@@ -93,7 +132,7 @@
 		(at 131.895101 36.7523 180)
 		(tags "S9B-ZR-3.4LFSN ")
 		(property "Reference" "J1"
-			(at 6.000001 0 180)
+			(at 6 2 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "800db0a8-fbf3-42fa-83c4-093940aabee0")
@@ -312,8 +351,8 @@
 		)
 		(pad "1" thru_hole circle
 			(at 0 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 4 "Net-(J1-Pad1)")
@@ -323,8 +362,8 @@
 		)
 		(pad "2" thru_hole circle
 			(at 1.5 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 2 "Net-(J1-Pad2)")
@@ -334,8 +373,8 @@
 		)
 		(pad "3" thru_hole circle
 			(at 3.000002 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 5 "Net-(J1-Pad3)")
@@ -345,8 +384,8 @@
 		)
 		(pad "4" thru_hole circle
 			(at 4.500001 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 6 "Net-(J1-Pad4)")
@@ -356,8 +395,8 @@
 		)
 		(pad "5" thru_hole circle
 			(at 6.000001 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "Net-(J1-Pad5)")
@@ -367,8 +406,8 @@
 		)
 		(pad "6" thru_hole circle
 			(at 7.5 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 3 "Net-(J1-Pad6)")
@@ -378,8 +417,8 @@
 		)
 		(pad "7" thru_hole circle
 			(at 9 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 8 "Net-(J1-Pad7)")
@@ -389,8 +428,8 @@
 		)
 		(pad "8" thru_hole circle
 			(at 10.500002 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 7 "Net-(J1-Pad8)")
@@ -400,8 +439,8 @@
 		)
 		(pad "9" thru_hole circle
 			(at 12.000002 0 180)
-			(size 1.2192 1.2192)
-			(drill 0.7112)
+			(size 1.2 1.2)
+			(drill 0.7)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 9 "Net-(J1-Pad9)")
@@ -823,6 +862,90 @@
 			(uuid "4b1a1085-67df-4aaf-ba0e-e081266f7c79")
 		)
 		(embedded_fonts no)
+	)
+	(gr_line
+		(start 135.509 63.5)
+		(end 117.475 63.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "084710f3-4add-4336-9d52-9edc09be972e")
+	)
+	(gr_arc
+		(start 138.684 60.325)
+		(mid 137.754064 62.570064)
+		(end 135.509 63.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2b8894d6-934e-4da1-8750-19fae6c93653")
+	)
+	(gr_arc
+		(start 135.509 31.75)
+		(mid 137.754064 32.679936)
+		(end 138.684 34.925)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "335ac357-7508-4708-9272-db52fc133732")
+	)
+	(gr_line
+		(start 117.475 31.75)
+		(end 135.509 31.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "39a95405-78e4-467a-8967-b9db742f44ed")
+	)
+	(gr_line
+		(start 114.3 60.325)
+		(end 114.3 34.925)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5cd5bbc9-b484-4f77-b139-913e9e7de850")
+	)
+	(gr_line
+		(start 138.684 34.925)
+		(end 138.684 60.325)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "80487010-8fb4-450b-9567-35be50cbd562")
+	)
+	(gr_arc
+		(start 114.3 34.925)
+		(mid 115.229936 32.679936)
+		(end 117.475 31.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c6823f91-2399-4def-a0c3-b34ef658af74")
+	)
+	(gr_arc
+		(start 117.475 63.5)
+		(mid 115.229936 62.570064)
+		(end 114.3 60.325)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d9e97a17-b1a0-43a1-8f8f-529f7f15cdc7")
 	)
 	(segment
 		(start 125.8951 42.0751)
